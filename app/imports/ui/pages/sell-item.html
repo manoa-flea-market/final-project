@@ -1,0 +1,45 @@
+<template name="Sell_Item_Page">
+  <div style="margin: 20px" class="ui container">
+    <h1 class="ui dividing header">Sell Item</h1>
+    <form class="ui form">
+      <div class="field">
+        <label>Item for Sale</label>
+        <div class="field">
+          <input type="text" name="item_name" id="item_name" placeholder="Item">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Price</label>
+        <input type="text" name="price" id="price" placeholder="Price">
+      </div>
+
+      <label>Category</label>
+      <select class="ui dropdown">
+        <option value="">Category</option>
+        <option value="1">Apartment Living</option>
+        <option value="2">Clothes</option>
+        <option value="3">Dorm Living</option>
+        <option value="4">Food</option>
+        <option value="5">Furniture</option>
+        <option value="6">Kitchen Appliances</option>
+        <option value="7">School Supplies</option>
+        <option value="8">Textbook</option>
+        <option value="9">Other</option>
+      </select>
+      <br>
+
+      <div class="ui form">
+        <div class="field">
+          <label>Description</label>
+          <textarea></textarea>
+        </div>
+      </div>
+      <br>
+      <button class="ui button" type="submit">Submit</button>
+    </form>
+
+
+
+  </div>
+</template>
