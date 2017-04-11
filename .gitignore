@@ -1,5 +1,25 @@
+<<<<<<< HEAD
  node_modules/
   .meteor/local/*
   .idea/
   npm-debug.log
   packages/*/.npm/
+=======
+# .gitignore standard file for ICS Software Engineering Meteor Development.
+
+# Ignore IntelliJ Project files.
+*.iml
+.idea/
+
+# If on a Mac, ignore DS_Store.
+.DS_Store
+
+# Don't commit the production settings file.
+settings.production.json
+
+# Build node_modules locally.
+node_modules/
+
+# Ignore the debug log generated when, for example, ESLint fails.
+npm-debug.log
+>>>>>>> master
