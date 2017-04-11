@@ -15,6 +15,48 @@ FlowRouter.route('/list', {
   },
 });
 
+FlowRouter.route('/profile-page', {
+  name: 'Profile_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Profile_Page' });
+  },
+});
+
+FlowRouter.route('/edit-profile-page', {
+  name: 'Edit_Profile_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Edit_Profile_Page' });
+  },
+});
+
+FlowRouter.route('/market-page', {
+  name: 'Market_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Market_Page' });
+  },
+});
+
+FlowRouter.route('/listing-page', {
+  name: 'Listing_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Listing_Page' });
+  },
+});
+
+FlowRouter.route('/add-listing-page', {
+  name: 'Add_Listing_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Add_Listing_Page' });
+  },
+});
+
+FlowRouter.route('/edit-listing-page', {
+  name: 'Edit_Listing_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Edit_Listing_Page' });
+  },
+});
+
 FlowRouter.route('/add', {
   name: 'Add_Stuff_Page',
   action() {

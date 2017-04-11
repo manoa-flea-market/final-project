@@ -1,12 +1,17 @@
 <template name="Header">
-    <div class="ui top fixed borderless inverted menu">
-  <div class="ui container">
-      <a class="item" href="{{pathFor 'Home_Page'}}"><h1>meteor-application-template</h1></a>
+  <div style="margin: 0px; border-radius: 0px" class="ui borderless inverted menu">
+    <div class="ui container">
+      <a class="item" href="{{pathFor 'Home_Page'}}"><h1>Manoa Flea Market</h1></a>
+      <a class="{{ isActiveRoute 'Market_Page'}} item" href="{{ pathFor 'Market_Page' }}">Market</a>
+      <a class="{{ isActiveRoute 'Add_Listing_Page'}} item" href="{{ pathFor 'Add_Listing_Page' }}">Add Listing</a>
+      <a class="{{ isActiveRoute 'Edit_Listing_Page'}} item" href="{{ pathFor 'Edit_Listing_Page' }}">Edit Listing</a>
+      <a class="{{ isActiveRoute 'Profile_Page'}} item" href="{{ pathFor 'Profile_Page' }}">Profile</a>
+      <a class="{{ isActiveRoute 'Edit_Profile_Page'}} item" href="{{ pathFor 'Edit_Profile_Page' }}">Edit Profile</a>
       {{#if currentUser}}
-        <a class="{{ isActiveRoute 'Add_Stuff_Page'}} item" href="{{ pathFor 'Add_Stuff_Page' }}">Add Stuff </a>
-        <a class="{{ isActiveRoute 'List_Stuff_Page'}} item" href="{{ pathFor 'List_Stuff_Page' }}">List Stuff</a>
-      {{/if}}
+      <a class="{{ isActiveRoute 'Profile_Page'}} item" href="{{ pathFor 'Profile_Page' }}">{{currentUser}}</a>
+      {{else}}
       <a href="#" class="right aligned item">{{> loginButtons align="right"}} </a>
+      {{/if}}
     </div>
   </div>
 </template>
