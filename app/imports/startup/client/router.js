@@ -37,9 +37,9 @@ FlowRouter.route('/market-page', {
 });
 
 FlowRouter.route('/contact-page', {
-  name: 'Contact_Page',
+  name: 'List_Contact_Page',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Contact_Page' });
+    BlazeLayout.render('App_Body', { main: 'List_Contact_Page' });
   },
 });
 
