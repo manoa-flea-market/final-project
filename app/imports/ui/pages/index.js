@@ -21,6 +21,9 @@ import './edit-listing-page.js';
 import './edit-profile-page.html';
 import './edit-profile-page.js';
 
+import './list-contact-page.html';
+import './list-contact-page.js';
+
 import './market-page.html';
 import './market-page.js';
 
