@@ -2,16 +2,22 @@
   <div style="margin: 0px; border-radius: 0px" class="ui borderless inverted menu">
     <div class="ui container">
       <a class="item" href="{{pathFor 'Home_Page'}}"><h1>Manoa Flea Market</h1></a>
-      <a class="{{ isActiveRoute 'Market_Page'}} item" href="{{ pathFor 'Market_Page' }}">Market</a>
-      <a class="{{ isActiveRoute 'Add_Listing_Page'}} item" href="{{ pathFor 'Add_Listing_Page' }}">Add Listing</a>
-      <a class="{{ isActiveRoute 'Edit_Listing_Page'}} item" href="{{ pathFor 'Edit_Listing_Page' }}">Edit Listing</a>
-      <a class="{{ isActiveRoute 'Profile_Page'}} item" href="{{ pathFor 'Profile_Page' }}">Profile</a>
-      <a class="{{ isActiveRoute 'Edit_Profile_Page'}} item" href="{{ pathFor 'Edit_Profile_Page' }}">Edit Profile</a>
-      <a class="{{ isActiveRoute 'List_Contact_Page'}} item" href="{{ pathFor 'List_Contact_Page' }}">Contact List</a>
+      <div class="ui simple dropdown item" style="background-color: transparent">
+        <i class="dropdown icon"></i>
+        <div class="text" style="color: white"><h2>Let's Go!</h2></div>
+        <div class="menu">
+          <a class="{{ isActiveRoute 'Market_Page'}} item" href="{{ pathFor 'Market_Page' }}">Market</a>
+          <a class="{{ isActiveRoute 'Add_Listing_Page'}} item" href="{{ pathFor 'Add_Listing_Page' }}">Add Listing</a>
+          <a class="{{ isActiveRoute 'Edit_Listing_Page'}} item" href="{{ pathFor 'Edit_Listing_Page' }}">Edit Listing</a>
+          <a class="{{ isActiveRoute 'Profile_Page'}} item" href="{{ pathFor 'Profile_Page' }}">Profile</a>
+          <a class="{{ isActiveRoute 'Edit_Profile_Page'}} item" href="{{ pathFor 'Edit_Profile_Page' }}">Edit Profile</a>
+          <a class="{{ isActiveRoute 'List_Contact_Page'}} item" href="{{ pathFor 'List_Contact_Page' }}">Contact List</a>
+        </div>
+      </div>
       {{#if currentUser}}
-      <a class="{{ isActiveRoute 'Profile_Page'}} item" href="{{ pathFor 'Profile_Page' }}">{{currentUser}}</a>
+      <a class="{{ isActiveRoute 'Profile_Page'}} item; right aligned item" href="{{ pathFor 'Profile_Page' }}">{{currentUser}}</a>
       {{else}}
-      <a href="#" class="right aligned item">{{> loginButtons align="right"}} </a>
+      <a href="#" class="right aligned item" style="color: black">{{> loginButtons align="right"}} </a>
       {{/if}}
     </div>
   </div>
