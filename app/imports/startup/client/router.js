@@ -15,6 +15,13 @@ FlowRouter.route('/sell-item', {
   },
 });
 
+FlowRouter.route('/user-home-page', {
+  name: 'User_Home_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'User_Home_Page' });
+  },
+});
+
 FlowRouter.route('/list', {
   name: 'List_Stuff_Page',
   action() {
