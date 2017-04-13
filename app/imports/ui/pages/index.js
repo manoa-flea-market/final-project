@@ -10,10 +10,6 @@ import './home-page.js';
 import './list-stuff-page.html';
 import './list-stuff-page.js';
 
-<<<<<<< HEAD
-import './sell-item.html';
-import './sell-item';
-=======
 import './listing-page.html';
 import './listing-page.js';
 
@@ -34,4 +30,3 @@ import './market-page.js';
 
 import './profile-page.html';
 import './profile-page.js';
->>>>>>> master
