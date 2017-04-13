@@ -8,17 +8,17 @@ FlowRouter.route('/', {
   },
 });
 
-FlowRouter.route('/sell-item', {
-  name: 'Sell_Item_Page',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'Sell_Item_Page' });
-  },
-});
-
 FlowRouter.route('/user-home-page', {
   name: 'User_Home_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'User_Home_Page' });
+  },
+});
+
+FlowRouter.route('/admin-home-page', {
+  name: 'Admin_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Admin_Page' });
   },
 });
 
