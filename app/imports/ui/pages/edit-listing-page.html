@@ -1,25 +1,94 @@
 <template name="Edit_Listing_Page">
-  <div style="margin-top: 20px" class="ui container">
-    <form class="ui form contact-data-form">
-      <h4 class="ui dividing header">Edit Listing</h4>
+  <div style="margin: 20px" class="ui container">
+    <h1 class="ui dividing header">Sell Item</h1>
+    <form class="ui form">
       <div class="field">
-        <label>Title</label>
-        <input type="text" name="title" id="title" placeholder="Title">
+        <label>Item for Sale</label>
+        <div class="field">
+          <input type="text" name="item_name" id="item_name" placeholder="Item">
+        </div>
       </div>
+
       <div class="field">
         <label>Price</label>
-        <input type="number" name="price" id="price" placeholder="$0">
+        <input type="text" name="price" id="price" placeholder="Price">
       </div>
-      <div class="field">
-        <label>Desciption</label>
-        <input type="text" name="description" id="description">
+
+      <label>Choose a Category:</label>
+      <div class="inline fields">
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="category" checked="" tabindex="0" class="hidden">
+            <img class="ui mini circular image" style= "margin-left: 30px" src="/images/apartment.jpeg"/>
+            <label>Apartment Living</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="category" tabindex="0" class="hidden">
+            <img class="ui mini circular image" style="margin-left: 30px" src="/images/clothes.jpeg"/>
+            <label>Clothes</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="category" tabindex="0" class="hidden">
+            <img class="ui mini circular image" style="margin-left: 30px" src="/images/dorm.jpeg"/>
+            <label>Dorm Living</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="category" tabindex="0" class="hidden">
+            <img class="ui mini circular image" style="margin-left: 30px" src="/images/food.jpeg"/>
+            <label>Food</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="category" tabindex="0" class="hidden">
+            <img class="ui mini circular image" style="margin-left: 30px" src="/images/furniture.jpeg"/>
+            <label>Furniture</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="category" tabindex="0" class="hidden">
+            <img class="ui mini circular image" style="margin-left: 30px" src="/images/kitchen.jpeg"/>
+            <label>Kitchen Appliances</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="category" tabindex="0" class="hidden">
+            <img class="ui mini circular image" style="margin-left: 30px" src="/images/schoolsupplies.png"/>
+            <label>School Supplies</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="category" tabindex="0" class="hidden">
+            <img class="ui mini circular image" style="margin-left: 30px" src="/images/textbooks.jpeg"/>
+            <label>Textbooks</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="category" tabindex="0" class="hidden">
+            <img class="ui mini circular image" style="margin-left: 30px" src="/images/trinkets.jpeg"/>
+            <label>Other</label>
+          </div>
+        </div>
       </div>
-      <div class="field">
-        <label>Image</label>
-        <button class="ui upload button">Upload Images</button>
-        <p>file1.jpg</p>
+      <div class="ui form">
+        <div class="field">
+          <label>Description</label>
+          <textarea></textarea>
+        </div>
       </div>
-      <button class="ui submit button">Update Listing</button>
+      <br>
+      <button class="ui button" type="submit">Submit</button>
     </form>
+
   </div>
 </template>

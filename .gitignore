@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+ node_modules/
+  .meteor/local/*
+  .idea/
+  npm-debug.log
+  packages/*/.npm/
+=======
 # .gitignore standard file for ICS Software Engineering Meteor Development.
 
 # Ignore IntelliJ Project files.
@@ -16,3 +23,4 @@ node_modules/
 
 # Ignore the debug log generated when, for example, ESLint fails.
 npm-debug.log
+>>>>>>> master
