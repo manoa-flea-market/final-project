@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  node_modules/
   .meteor/local/*
   .idea/
@@ -23,6 +22,5 @@ node_modules/
 
 # Ignore the debug log generated when, for example, ESLint fails.
 npm-debug.log
->>>>>>> master
 
 *.xml
