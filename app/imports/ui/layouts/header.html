@@ -1,12 +1,11 @@
 <template name="Header">
   <div style="margin: 0px; border-radius: 0px" class="ui borderless inverted menu">
     <div class="ui container">
-      <a class="item" href="{{pathFor 'User_Home_Page'}}"><h1>Manoa Flea Market</h1></a>
+      <a class="item" href="{{pathFor ''}}"><h1>Manoa Flea Market</h1></a>
       {{#if currentUser}}
       <div class="ui simple dropdown item" style="background-color: transparent">
         <div class="text" style="color: white"><h2>Let's Go!</h2></div>
         <div class="menu">
-          <a class="{{ isActiveRoute 'User_Home_Page'}} item" href="{{ pathFor 'User_Home_Page' }}">Homepage</a>
           <a class="{{ isActiveRoute 'Market_Page'}} item" href="{{ pathFor 'Market_Page' }}">Market</a>
           <a class="{{ isActiveRoute 'Add_Listing_Page'}} item" href="{{ pathFor 'Add_Listing_Page' }}">Add Listing</a>
           <a class="{{ isActiveRoute 'Edit_Listing_Page'}} item" href="{{ pathFor 'Edit_Listing_Page' }}">Edit Listing</a>
