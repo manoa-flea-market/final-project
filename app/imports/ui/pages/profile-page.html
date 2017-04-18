@@ -1,4 +1,5 @@
 <template name="Profile_Page">
+  {{#If_Logged_In}}
   <img class="ui small centered image" src="/images/profile-icon.png">
   <h3 style="text-align: center">username</h3>
   <h3 style="text-align: center">email</h3>
@@ -41,4 +42,5 @@
       </div>
     </div>
   </div>
+  {{/If_Logged_In}}
 </template>

@@ -1,6 +1,3 @@
-import './home-page.html';
-import './home-page.js';
-
 import './listing-page.html';
 import './listing-page.js';
 

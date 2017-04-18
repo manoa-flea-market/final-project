@@ -1,4 +1,5 @@
 <template name="Listing_Page">
+  {{#If_Logged_In}}
   <div style="padding-top: 15px" class="ui two column grid container">
     <div class="column">
       <img class="ui large image" src="/images/BotW.jpg">
@@ -15,4 +16,5 @@
       </div>
     </div>
   </div>
+  {{/If_Logged_In}}
 </template>

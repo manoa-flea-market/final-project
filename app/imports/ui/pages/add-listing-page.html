@@ -1,4 +1,5 @@
 <template name="Add_Listing_Page">
+  {{#If_Logged_In}}
   <div style="margin: 20px" class="ui container">
     <h1 class="ui dividing header">Sell Item</h1>
     <form class="ui form">
@@ -89,6 +90,6 @@
       <br>
       <button class="ui button" type="submit">Submit</button>
     </form>
-
   </div>
+  {{/If_Logged_In}}
 </template>
