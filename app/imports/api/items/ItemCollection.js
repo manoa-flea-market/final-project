@@ -19,6 +19,7 @@ class ItemCollection extends BaseCollection {
     super('Item', new SimpleSchema({
       name: { type: String },
       price: { type: String },
+      seller: { type: String },
       category: {type: [String] },
       // Remainder are optional
       description: { type: String, optional: true },
@@ -37,26 +38,18 @@ class ItemCollection extends BaseCollection {
    * @param { Object } description Object with required key name, price, and category.
    * Remaining keys are optional.
    * Username must be unique for all users. It should be the UH email account.
-   * Interests is an array of defined interest names.
-   * @throws { Meteor.Error } If a user with the supplied username already exists, or
-   * if one or more interests are not defined, or if github, facebook, and instagram are not URLs.
+   * Categories is an array of defined category names.
+   * @throws { Meteor.Error } if one or more interests are not defined
    * @returns The newly created docID.
    */
-  define({ firstName = '', lastName = '', username, bio = '', interests, picture = '', title = '', github = '',
-      facebook = '', instagram = '' }) {
+  define({ name = '', price = '', seller, category, description = '', picture = '' }) {
     // make sure required fields are OK.
-    const checkPattern = { firstName: String, lastName: String, username: String, bio: String, picture: String,
-      title: String };
-    check({ firstName, lastName, username, bio, picture, title }, checkPattern);
+    const checkPattern = { name: String, price: String, seller: String, description: String, picture: String };
+    check({ name, price, seller, description, picture }, checkPattern);
 
-    if (this.find({ username }).count() > 0) {
-      throw new Meteor.Error(`${username} is previously defined in another Profile`);
-    }
-
-    // Throw an error if any of the passed Interest names are not defined.
-    Interests.assertNames(interests);
-    return this._collection.insert({ firstName, lastName, username, bio, interests, picture, title, github,
-      facebook, instagram });
+    // Throw an error if any of the passed Category names are not defined.
+    Category.assertNames(category);
+    return this._collection.insert({ name, price, seller, category, picture });
   }
 
   /**
