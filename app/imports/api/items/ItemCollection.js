@@ -20,7 +20,7 @@ class ItemCollection extends BaseCollection {
       name: { type: String },
       price: { type: String },
       seller: { type: String },
-      category: {type: [String] },
+      category: { type: [String] },
       // Remainder are optional
       description: { type: String, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },

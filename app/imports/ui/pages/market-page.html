@@ -1,139 +1,18 @@
 <template name="Market_Page">
   {{#If_Logged_In}}
-  <div style="padding: 20px 20px 20px 20px" class="ui search">
-    <input class="prompt" type="text" placeholder="Search">
-    <div class="results"></div>
+  {{#if Template.subscriptionsReady}}
+  <div style="margin-top: 10px" class="ui container">
+
+    <form class="ui equal width form filter-data-form">
+      <div class="field">
+        {{> Select_Form_Control label="Interests" options=interests multiple=true }}
+      </div>
+      <button class="ui teal button" type="submit">Filter</button>
+    </form>
+
+    {{> Filter_Market_Page items=items }}
+
   </div>
-  <div class="ui stackable four column grid container">
-    <div class="column">
-      <div class="ui card">
-        <div class="image">
-          <img src="/images/BotW.jpg">
-        </div>
-        <div class="content">
-          <a href="{{pathFor 'Listing_Page'}}" class="header">Legend of Zelda BotW for Switch</a>
-          <div class="meta">
-            <span class="price">$60</span>
-          </div>
-          <div class="description">
-            New unopened copy of the new Zelda game for Nintendo Switch
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="ui card">
-        <div class="image">
-          <img src="/images/guitar.jpg">
-        </div>
-        <div class="content">
-          <a class="header">Guitar</a>
-          <div class="meta">
-            <span class="price">$300</span>
-          </div>
-          <div class="description">
-            Description
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="ui card">
-        <div class="image">
-          <img src="/images/magazine-rack.jpg">
-        </div>
-        <div class="content">
-          <a class="header">Magazine holders</a>
-          <div class="meta">
-            <span class="price">$15</span>
-          </div>
-          <div class="description">
-            Description
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="ui card">
-        <div class="image">
-          <img src="/images/marvel-encyclopedia.jpg">
-        </div>
-        <div class="content">
-          <a class="header">Marvel Encyclopedia</a>
-          <div class="meta">
-            <span class="price">$50</span>
-          </div>
-          <div class="description">
-            Description
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="ui card">
-        <div class="image">
-          <img src="/images/pumps.jpg">
-        </div>
-        <div class="content">
-          <a class="header">black pumps</a>
-          <div class="meta">
-            <span class="price">$25</span>
-          </div>
-          <div class="description">
-            Description
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="ui card">
-        <div class="image">
-          <img src="/images/question-block-light.jpg">
-        </div>
-        <div class="content">
-          <a class="header">Question Block Light</a>
-          <div class="meta">
-            <span class="price">$40</span>
-          </div>
-          <div class="description">
-            Description
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="ui card">
-        <div class="image">
-          <img src="/images/space-oddessy.jpg">
-        </div>
-        <div class="content">
-          <a class="header">2001 A Space Oddessy</a>
-          <div class="meta">
-            <span class="price">$20</span>
-          </div>
-          <div class="description">
-            Description
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="ui card">
-        <div class="image">
-          <img src="/images/tank-top.jpg">
-        </div>
-        <div class="content">
-          <a class="header">Tank Top</a>
-          <div class="meta">
-            <span class="price">$15</span>
-          </div>
-          <div class="description">
-            Description
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div style="padding-top: 15px" class="ui center aligned container">Next Page</div>
+  {{/if}}
   {{/If_Logged_In}}
 </template>

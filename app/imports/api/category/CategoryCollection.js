@@ -60,7 +60,7 @@ class CategoryCollection extends BaseCollection {
    * @throws { Meteor.Error} If any of the instanceIDs cannot be found.
    */
   findNames(categoryIDs) {
-    return categoryIDs.map(interestID => this.findName(categoryID));
+    return categoryIDs.map(categoryID => this.findName(categoryID));
   }
 
   /**
