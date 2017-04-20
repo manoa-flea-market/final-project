@@ -74,3 +74,4 @@ class ItemCollection extends BaseCollection {
     return { name, price, category, description, picture };
   }
 }
+export const Items = new ItemCollection();
