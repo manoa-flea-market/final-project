@@ -28,7 +28,7 @@ Template.Filter_Page.helpers({
 
   categories() {
     return _.map(Categories.findAll(),
-        function makeInterestObject(category) {
+        function makeCategoryObject(category) {
           return {
             label: category.name,
             selected: _.contains(Template.instance().messageFlags.get(selectedCategoriesKey), category.name),
@@ -37,7 +37,7 @@ Template.Filter_Page.helpers({
   },
 });
 
-Template.Filter_Page.events({
+Template.Market_Page.events({
   'submit .filter-data-form'(event, instance) {
     event.preventDefault();
     const selectedOptions = _.filter(event.target.Categories.selectedOptions, (option) => option.selected);

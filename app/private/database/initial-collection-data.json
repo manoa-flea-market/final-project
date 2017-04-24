@@ -1,0 +1,64 @@
+{
+  "comment": "Initial contents for the BowFolios database. For development purposes only.",
+  "collections": [
+    {
+      "name": "CategoryCollection",
+      "contents": [
+        {
+          "name": "Books",
+          "description": ""
+        },
+        {
+          "name": "Clothes",
+          "description": "Things you wear"
+        },
+        {
+          "name": "Games",
+          "description": ""
+        },
+        {
+          "name": "Decor",
+          "description": "Decorative items"
+        },
+        {
+          "name": "Furniture",
+          "description": ""
+        },
+        {
+          "name": "Tools",
+          "description": "Devices that help with building or creating"
+        },
+        {
+          "name": "Instruaments",
+          "description": "Things you can play"
+        },
+      ]
+    },
+    {
+      "name": "ItemCollection",
+      "contents": [
+        {
+          "name": "The Legend of Zelda: Breath of the Wild",
+          "price": "$60",
+          "seller": "erikhuan",
+          "interests": [
+            "Games"
+          ],
+          "description": "Brand new copy of The Legend of Zelda: Breath of the Wild for Nintendo Switch",
+          "picture": "/images/BotW.jpg"
+        },
+        {
+          "name": "Question Block Light",
+          "price": "$20",
+          "seller": "erikhuan",
+          "interests": [
+            "Decor",
+            "Games"
+          ],
+          "description": "A lamp made to look like a '?' Block from Super Mario Bros.",
+          "picture": "/images/question-block-light.jpg"
+        },
+      ]
+    }
+  ]
+}
