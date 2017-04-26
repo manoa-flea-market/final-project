@@ -90,5 +90,4 @@ class ProfileCollection extends BaseCollection {
   }
 }
 
-
 export const Profiles = new ProfileCollection();
