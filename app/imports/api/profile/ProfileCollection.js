@@ -89,3 +89,6 @@ class ProfileCollection extends BaseCollection {
     return { firstName, lastName, username, bio, interests, picture, title, github, facebook, instagram };
   }
 }
+
+
+export const Profiles = new ProfileCollection();

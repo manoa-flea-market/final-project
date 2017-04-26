@@ -1,22 +1,24 @@
 <template name="Edit_Profile_Page">
   {{#If_Logged_In}}
-  <div style="margin-top: 20px" class="ui container">
-    <form class="ui form contact-data-form">
-      <h4 class="ui dividing header">Edit Profile</h4>
+  {{#if Template.subscriptionsReady}}
+  <div style="margin-top: 25px" class="ui container">
+    <form class="ui form contact-data-form {{ errorClass }}">
+      <h4 class="ui dividing header">Add Contact</h4>
       <div class="field">
-        <label>Profile Picture</label>
-        <button class="ui upload button">Upload Images</button>
-        <p>file1.jpg</p>
+        <div class="two fields">
+          {{> Text_Form_Control label="First" required=true value=(contactDataField 'first') errorMessage=(fieldError "first")}}
+          {{> Text_Form_Control label="Last" required=true value=(contactDataField 'last') errorMessage=(fieldError "last")}}
+        </div>
       </div>
       <div class="field">
-        <label>Username</label>
-        <input type="text" name="username" id="username" placeholder="Username">
+        <div class="two fields">
+          {{> Text_Form_Control label="Telephone" required=true value=(contactDataField 'telephone') errorMessage=(fieldError "telephone")}}
+          {{> Text_Form_Control label="Email" required=true value=(contactDataField 'email') errorMessage=(fieldError "email")}}
+        </div>
       </div>
-      <div class="field">
-        <label>Email</label>
-        <input type="text" name="email" id="email" placeholder="Email">
-      </div>
+      <button class="ui button" type="submit">Update</button>
     </form>
   </div>
+  {{/if}}
   {{/If_Logged_In}}
 </template>

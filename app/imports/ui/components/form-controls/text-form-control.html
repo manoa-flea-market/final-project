@@ -1,0 +1,14 @@
+<template name="Text_Form_Control">
+
+  <div class="{{#if required}}required{{/if}} field">
+    <label>{{label}}</label>
+    <div class="field">
+      <input type="text"
+             name="{{#if name}}{{name}}{{else}}{{label}}{{/if}}"
+             id="{{#if id}}{{id}}{{else}}{{label}}{{/if}}"
+             placeholder="{{#if placeholder}}{{placeholder}}{{else}}{{label}}{{/if}}"
+             value="{{value}}">
+    </div>
+    {{> Form_Error_Message errorMessage=errorMessage}}
+  </div>
+</template>
