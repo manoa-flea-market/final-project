@@ -29,12 +29,20 @@ FlowRouter.route('/profile-page', {
   },
 });
 
-FlowRouter.route('/edit-profile-page', {
+FlowRouter.route('/edit-profile-page/:_id', {
   name: 'Edit_Profile_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'Edit_Profile_Page' });
   },
 });
+
+FlowRouter.route('/add-profile-page', {
+  name: 'Add_Profile_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Add_Profile_Page' });
+  },
+});
+
 
 FlowRouter.route('/market-page', {
   name: 'Market_Page',
@@ -43,10 +51,10 @@ FlowRouter.route('/market-page', {
   },
 });
 
-FlowRouter.route('/list-contact-page', {
-  name: 'List_Contact_Page',
+FlowRouter.route('/contact-page', {
+  name: 'Contact_Page',
   action() {
-    BlazeLayout.render('App_Body', { main: 'List_Contact_Page' });
+    BlazeLayout.render('App_Body', { main: 'Contact_Page' });
   },
 });
 

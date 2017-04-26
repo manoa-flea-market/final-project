@@ -1,5 +1,6 @@
-import { Interests } from '/imports/api/interest/InterestCollection';
-import { Profiles } from '/imports/api/profile/ProfileCollection';
+import { Contacts } from '../../api/contacts/contacts.js';
+import { Meteor } from 'meteor/meteor';
 
-Interests.publish();
-Profiles.publish();
+Meteor.publish('Contacts', function publishContactsData() {
+  return Contacts.find();
+});
