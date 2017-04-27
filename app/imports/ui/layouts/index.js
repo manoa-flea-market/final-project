@@ -3,7 +3,6 @@ import './app-body.js';
 import './cas-login.html';
 import './cas-login.js';
 import './contact-layout.html';
-import './directory-item.html';
 import './app-not-found.html';
 import './footer.html';
 import './header.html';
