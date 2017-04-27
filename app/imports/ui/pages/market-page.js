@@ -1,7 +1,7 @@
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { _ } from 'meteor/underscore';
-import { Items } from '/imports/api/item/ItemCollection';
+import { Items } from '/imports/api/items/ItemCollection';
 import { Categories } from '/imports/api/category/CategoryCollection';
 
 const selectedCategoriesKey = 'selectedCategories';
