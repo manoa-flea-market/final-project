@@ -1,46 +1,9 @@
 <template name="Profile_Page">
   {{#If_Logged_In}}
-  <img class="ui small centered image" src="/images/profile-icon.png">
-  <h3 style="text-align: center">username</h3>
-  <h3 style="text-align: center">email</h3>
-  <hr>
-  <h3 style="text-align: center">username's Listings</h3>
-  <div class="ui stackable four column grid container">
-    <div class="column">
-      <div class="ui card">
-        <div class="image">
-          <a class="ui left corner label" href="{{pathFor 'Edit_Listing_Page'}}">
-            <i class="edit icon"></i>
-          </a>
-          <img src="/images/BotW.jpg">
-        </div>
-        <div class="content">
-          <a href="{{pathFor 'Listing_Page'}}" class="header">Legend of Zelda BotW for Switch</a>
-          <div class="meta">
-            <span class="price">$60</span>
-          </div>
-          <div class="description">
-            New unopened copy of the new Zelda game for Nintendo Switch
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="ui card">
-        <div class="image">
-          <img src="/images/question-block-light.jpg">
-        </div>
-        <div class="content">
-          <a class="header">Question Block Light</a>
-          <div class="meta">
-            <span class="price">$40</span>
-          </div>
-          <div class="description">
-            Description
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="ui container">
+    <h3>
+      <a href="{{pathFor 'add-profile-page' _id=contact.id}}">Add</a>
+    </h3>
   </div>
   {{/If_Logged_In}}
 </template>
