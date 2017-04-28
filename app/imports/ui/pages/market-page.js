@@ -6,14 +6,14 @@ import { Categories } from '/imports/api/category/CategoryCollection';
 
 const selectedCategoriesKey = 'selectedCategories';
 
-Template.Filter_Page.onCreated(function onCreated() {
+Template.Market_Page.onCreated(function onCreated() {
   this.subscribe(Categories.getPublicationName());
   this.subscribe(Items.getPublicationName());
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(selectedCategoriesKey, undefined);
 });
 
-Template.Filter_Page.helpers({
+Template.Market_Page.helpers({
   items() {
     // Initialize selectedCategories to all of them if messageFlags is undefined.
     if (!Template.instance().messageFlags.get(selectedCategoriesKey)) {

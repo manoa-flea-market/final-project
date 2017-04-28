@@ -41,7 +41,7 @@
           "name": "The Legend of Zelda: Breath of the Wild",
           "price": "$60",
           "seller": "erikhuan",
-          "interests": [
+          "categories": [
             "Games"
           ],
           "description": "Brand new copy of The Legend of Zelda: Breath of the Wild for Nintendo Switch",
@@ -51,7 +51,7 @@
           "name": "Question Block Light",
           "price": "$20",
           "seller": "erikhuan",
-          "interests": [
+          "categories": [
             "Decor",
             "Games"
           ],
