@@ -10,7 +10,7 @@ import { Meteor } from 'meteor/meteor';
  * Contacts provide portfolio data for a user.
  * @extends module:Base~BaseCollection
  */
-class ProfileCollection extends BaseCollection {
+class ContactCollection extends BaseCollection {
 
   /**
    * Creates the Contact collection.

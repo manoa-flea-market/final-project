@@ -1,6 +1,6 @@
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 import BaseCollection from '/imports/api/base/BaseCollection';
-import { Category } from '/imports/api/category/CategoryCollection';
+import { Categories } from '/imports/api/category/CategoryCollection';
 import { check } from 'meteor/check';
 import { Meteor } from 'meteor/meteor';
 
@@ -20,7 +20,7 @@ class ItemCollection extends BaseCollection {
       name: { type: String },
       price: { type: String },
       seller: { type: String },
-      category: {type: [String] },
+      categories: { type: [String] },
       // Remainder are optional
       description: { type: String, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
@@ -32,7 +32,7 @@ class ItemCollection extends BaseCollection {
    * @example
    * Items.define({ ({ name: 'Discrete Mathematics and it's Application',
    *                   price: '49.50',
-   *                   category: ['textbook', 'school supplies'});
+   *                   categories: ['textbook', 'school supplies'});
    *                   description: 'Textbook used with ICS 141 and 241.'
    *                   picture: www.google.com
    * @param { Object } description Object with required key name, price, and category.
@@ -42,14 +42,14 @@ class ItemCollection extends BaseCollection {
    * @throws { Meteor.Error } if one or more interests are not defined
    * @returns The newly created docID.
    */
-  define({ name = '', price = '', seller, category, description = '', picture = '' }) {
+  define({ name = '', price = '', seller, categories, description = '', picture = '' }) {
     // make sure required fields are OK.
     const checkPattern = { name: String, price: String, seller: String, description: String, picture: String };
     check({ name, price, seller, description, picture }, checkPattern);
 
     // Throw an error if any of the passed Category names are not defined.
-    Category.assertNames(category);
-    return this._collection.insert({ name, price, seller, category, picture });
+    Categories.assertNames(categories);
+    return this._collection.insert({ name, price, seller, categories, picture });
   }
 
   /**
@@ -61,9 +61,11 @@ class ItemCollection extends BaseCollection {
     const doc = this.findDoc(docID);
     const name = doc.name;
     const price = doc.price;
-    const category = doc.category;
+    const seller = doc.seller;
+    const categories = doc.categories;
     const description = doc.description;
     const picture = doc.picture;
-    return { name, price, category, description, picture };
+    return { name, price, seller, categories, description, picture };
   }
 }
+export const Items = new ItemCollection();

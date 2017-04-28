@@ -1,0 +1,24 @@
+<template name="Directory_Item">
+
+  <div class="card">
+    <div class="content">
+      <img class="right floated mini ui image" src="{{ item.picture }}">
+      <div class="header">
+        {{ item.name }}
+      </div>
+      <div class="meta">
+        {{ item.price}}
+      </div>
+      <div class="description">
+        {{ item.description }}
+      </div>
+      <div style="margin-top: 10px">
+        {{#each category in item.categories}}
+          <a style="margin-bottom: 2px" class="ui teal tag small label">{{category}}</a>
+        {{/each}}
+      </div>
+
+    </div>
+  </div>
+
+</template>

@@ -19,6 +19,8 @@ import './contact-page.js';
 import './market-page.html';
 import './market-page.js';
 
+import './filter-market-page.html';
+
 import './profile-page.html';
 import './profile-page.js';
 
