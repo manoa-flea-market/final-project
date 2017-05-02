@@ -10,5 +10,10 @@
       "popupWidth": 810,
       "popupHeight": 610
     }
+  },
+  "galaxy.meteor.com": {
+    "env": {
+      "MONGO_URL": "mongodb://mekp:Kapolei96707@ds159180.mlab.com:59180/appdb"
+    }
   }
 }

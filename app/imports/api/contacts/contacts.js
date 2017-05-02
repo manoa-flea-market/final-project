@@ -9,6 +9,12 @@ export const Contacts = new Mongo.Collection('Contacts');
  * Create the schema for Stuff
  */
 export const ContactsSchema = new SimpleSchema({
+  picture: {
+    label: 'picture',
+    type: String,
+    optional: false,
+    max: 500,
+  },
   first: {
     label: 'first',
     type: String,
@@ -23,9 +29,8 @@ export const ContactsSchema = new SimpleSchema({
   },
   telephone: {
     label: 'telephone',
-    type: String,
+    type: Number,
     optional: false,
-    max: 500,
   },
   email: {
     label: 'email',

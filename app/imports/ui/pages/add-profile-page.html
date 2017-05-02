@@ -4,15 +4,18 @@
     <form class="ui form contact-data-form {{ errorClass }}">
       <h4 class="ui dividing header">Add Profile</h4>
       <div class="field">
+        <div class="field">
+          {{> Text_Form_Control label="Picture" required=true placeholder="http://foo.com/shot.jpg" errorMessage=(fieldError "picture")}}
+        </div>
         <div class="two fields">
-          {{> Text_Form_Control label="First" required=true errorMessage=(fieldError "first")}}
-          {{> Text_Form_Control label="Last" required=true errorMessage=(fieldError "last")}}
+          {{> Text_Form_Control label="First" required=true placeholder="John" errorMessage=(fieldError "first")}}
+          {{> Text_Form_Control label="Last" required=true placeholder="Doe" errorMessage=(fieldError "last")}}
         </div>
       </div>
       <div class="field">
         <div class="two fields">
-          {{> Text_Form_Control label="Telephone" required=true errorMessage=(fieldError "telephone")}}
-          {{> Text_Form_Control label="Email" required=true errorMessage=(fieldError "email")}}
+          {{> Text_Form_Control label="Telephone" required=true placeholder="123456789" errorMessage=(fieldError "telephone")}}
+          {{> Text_Form_Control label="Email" required=true placeholder="JohnDoe@hawaii.edu" errorMessage=(fieldError "email")}}
         </div>
       </div>
       <button class="ui button" type="submit">Submit</button>

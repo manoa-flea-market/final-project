@@ -5,6 +5,9 @@
     <form class="ui form contact-data-form {{ errorClass }}">
       <h4 class="ui dividing header">Add Contact</h4>
       <div class="field">
+        <div class="field">
+          {{> Text_Form_Control label="Picture" required=true value=(contactDataField 'picture') errorMessage=(fieldError "picture")}}
+        </div>
         <div class="two fields">
           {{> Text_Form_Control label="First" required=true value=(contactDataField 'first') errorMessage=(fieldError "first")}}
           {{> Text_Form_Control label="Last" required=true value=(contactDataField 'last') errorMessage=(fieldError "last")}}

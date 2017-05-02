@@ -5,6 +5,9 @@
       <div class="ui cards">
         {{#each contact in contactsList}}
           <div class="card">
+            <div class="image">
+              {{contact.picture}}
+            </div>
             <div class="content">
               <div class="header">
                 {{contact.first}} {{contact.last}}
