@@ -1,22 +1,34 @@
 <template name="Header">
+  {{#if currentUser}}
   <div style="margin: 0px; border-radius: 0px; background-color: #024E30" class="ui borderless inverted menu">
     <div class="ui container">
-      <a class="item" href="{{pathFor '/'}}"><h1>Manoa Flea Market</h1></a>
-      {{#if currentUser}}
+      <a style="color: white" class="item" href="{{pathFor '/'}}"><h1>Manoa Flea Market</h1></a>
       <div class="ui simple dropdown item" style="background-color: transparent">
-        <div class="text" style="color: white"><h2>Let's Go!</h2></div>
+        <div class="text" style="color: white"><h3>Market</h3></div>
         <div class="menu">
           <a class="{{ isActiveRoute 'Market_Page'}} item" href="{{ pathFor 'Market_Page' }}">Market</a>
           <a class="{{ isActiveRoute 'Add_Listing_Page'}} item" href="{{ pathFor 'Add_Listing_Page' }}">Add Listing</a>
-          <a class="{{ isActiveRoute 'Edit_Listing_Page'}} item" href="{{ pathFor 'Edit_Listing_Page' }}">Edit Listing</a>
-          <a class="{{ isActiveRoute 'Profile_Page'}} item" href="{{ pathFor 'Profile_Page' }}">Profile</a>
-          <a class="{{ isActiveRoute 'Edit_Profile_Page'}} item" href="{{ pathFor 'Edit_Profile_Page' }}">Edit Profile</a>
-          <a class="{{ isActiveRoute 'Contact_Page'}} item" href="{{ pathFor 'Contact_Page' }}">Contact List</a>
+          <a class="{{ isActiveRoute 'Edit_Listing_Page'}} item" href="{{ pathFor 'Edit_Listing_Page' }}">Edit
+            Listing</a>
         </div>
       </div>
-      <a class="{{ isActiveRoute 'Profile_Page'}} item" href="{{ pathFor 'Profile_Page' }}">{{currentUser}}</a>
-      {{/if}}
+
+      <a style="color: white" class="{{ isActiveRoute 'Contact_Page'}} item" href="{{ pathFor 'Contact_Page' }}"><h3>Contacts</h3></a>
+
+
+      <div class="ui simple dropdown item" style="background-color: transparent">
+        <div class="text" style="color: white"><h3>Profile</h3></div>
+        <div class="menu">
+          <a class="{{ isActiveRoute 'Profile_Page'}} item" href="{{ pathFor 'Profile_Page' }}">My Profile</a>
+          <a class="{{ isActiveRoute 'Edit_Profile_Page'}} item" href="{{ pathFor 'Edit_Profile_Page' }}">Edit
+            Profile</a>
+        </div>
+      </div>
+
+
       <a href="#" class="right aligned item">{{> Cas_Login align="right"}}</a>
     </div>
   </div>
+  {{/if}}
+
 </template>

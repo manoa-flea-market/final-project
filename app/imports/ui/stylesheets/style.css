@@ -1,9 +1,29 @@
-body {
-
-}
-
 .ui.borderless.inverted.menu {
   background-color: #024E30;
+}
+
+.landing-section-1{
+  padding: 10px 10px 30px 10px;
+  background-color: #024E30;
+  color: honeydew;
+}
+
+.landing-section-2{
+  padding: 10px 10px 30px 10px;
+  background-color: honeydew;
+  color: forestgreen;
+}
+
+.landing-section-3{
+  padding: 10px 10px 30px 10px;
+  background-color: #024E30;
+  color: honeydew;
+}
+
+.landing-section-4{
+  padding: 10px 10px 30px 10px;
+  background-color: honeydew;
+  color: forestgreen;
 }
 
 #login-buttons a, .accounts-dialog a {
