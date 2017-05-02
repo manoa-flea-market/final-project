@@ -1,8 +1,8 @@
 <template name="Header">
+  {{#if currentUser}}
   <div style="margin: 0px; border-radius: 0px; background-color: #024E30" class="ui borderless inverted menu">
     <div class="ui container">
       <a style="color: white" class="item" href="{{pathFor '/'}}"><h1>Manoa Flea Market</h1></a>
-      {{#if currentUser}}
       <div class="ui simple dropdown item" style="background-color: transparent">
         <div class="text" style="color: white"><h3>Market</h3></div>
         <div class="menu">
@@ -25,8 +25,10 @@
         </div>
       </div>
 
-      {{/if}}
+
       <a href="#" class="right aligned item">{{> Cas_Login align="right"}}</a>
     </div>
   </div>
+  {{/if}}
+
 </template>

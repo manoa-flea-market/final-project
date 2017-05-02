@@ -1,105 +1,66 @@
 <template name="User_Home_Page">
   {{#If_Logged_In}}
-  <div style="margin: 20px" class="ui container">
-  <div class="ui cards">
-
-    <div class="card">
-      <div class="content">
-        <img class="right floated mini ui image" src="/images/buy.jpeg">
-        <div class="header">
-          Buy
-        </div>
-        <div class="description">
-          Let's see what's for sale now.
-        </div>
-      </div>
-      <a class="ui bottom attached button" href="./market-page">
-        Market
-      </a>
-    </div>
-
-    <div class="card">
-      <div class="content">
-        <img class="right floated mini ui image" src="/images/sell.png">
-        <div class="header">
-          Sell
-        </div>
-        <div class="description">
-          List your items for sale now.
-        </div>
-      </div>
-      <a class="ui bottom attached button" href="./add-listing-page">
-        Add Listing
-      </a>
-    </div>
-
-    <div class="card">
-      <div class="content">
-        <img class="right floated mini ui image" src="/images/person.png">
-        <div class="header">
-          Profile
-        </div>
-        <div class="description">
-          view your profile now
-        </div>
-      </div>
-      <a class="ui bottom attached button" href="./profile-page">
-        Profile
-      </a>
-    </div>
-
-    <div class="card">
-      <div class="content">
-        <img class="right floated mini ui image" src="/images/people.png">
-        <div class="header">
-          Find
-        </div>
-        <div class="description">
-          Find other users and view their profiles
-        </div>
-      </div>
-      <a class="ui bottom attached button" href="./list-contact-page">
-        Contact List
-      </a>
-    </div>
-  </div>
-
-    <h1 class="ui dividing header">Notifications</h1>
-
+  <div style="margin: 20px; height: 550px" class="ui container">
     <div class="ui cards">
+
       <div class="card">
         <div class="content">
-          <img class="right floated mini ui image" src="/images/notification.png">
+          <img class="right floated mini ui image" src="/images/buy.jpeg">
           <div class="header">
-            Interested Buyer
+            Buy
           </div>
           <div class="description">
-            You have a buyer interested in buying one of your items
+            Let's see what's for sale now.
           </div>
         </div>
-        <div class="extra content">
-          <div class="ui two buttons">
-            <div class="ui basic green button">View Details</div>
-            <div class="ui basic red button">Ignore</div>
-          </div>
-        </div>
+        <a class="ui bottom attached button" href="./market-page">
+          Market
+        </a>
       </div>
+
       <div class="card">
         <div class="content">
-          <img class="right floated mini ui image" src="/images/notification.png">
+          <img class="right floated mini ui image" src="/images/sell.png">
           <div class="header">
-            Sold
+            Sell
           </div>
           <div class="description">
-            Your offer has been accepted!
+            List your items for sale now.
           </div>
         </div>
-        <div class="extra content">
-          <div class="ui two buttons">
-            <div class="ui basic green button">View Details</div>
-            <div class="ui basic red button">Ignore</div>
+        <a class="ui bottom attached button" href="./add-listing-page">
+          Add Listing
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="content">
+          <img class="right floated mini ui image" src="/images/person.png">
+          <div class="header">
+            Profile
+          </div>
+          <div class="description">
+            view your profile now
           </div>
         </div>
+        <a class="ui bottom attached button" href="./profile-page">
+          Profile
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="content">
+          <img class="right floated mini ui image" src="/images/people.png">
+          <div class="header">
+            Find
+          </div>
+          <div class="description">
+            Find other users and view their profiles
+          </div>
+        </div>
+        <a class="ui bottom attached button" href="./list-contact-page">
+          Contact List
+        </a>
       </div>
     </div>
 
