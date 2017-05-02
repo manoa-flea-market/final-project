@@ -5,45 +5,69 @@
   {{#if canShow}}
   {{> UI.contentBlock }}
   {{else}}
-  <div style="padding-top: 40px" class="ui text container">
-      <div style="padding-top: 30px" class="ui middle aligned centered grid text container">
 
-        <div style="padding-bottom: 30px" class="ui container">
-          <h1>Welcome to the</h1>
-          <h1>Manoa Flea Market</h1>
-          <hr>
+  <div class="landing-section-1">
+    <div class="ui grid">
+      <div class="row">
+        <div class="ui right aligned sixteen wide column">
+          {{> Cas_Login align="right"}}
+        </div>
+      </div>
+    </div>
 
-          <div class="ui two column grid container">
-            <div class="middle aligned column">
-              <h1>Login with your UH username</h1>
-              <p>Currently logged in user: {{ user }}</p>
-            </div>
-            <div class="column">
-              <img class="ui centered fluid circular image" src="/images/keyboard.png"/>
-            </div>
+    <div style="padding-top: 50px; height: 200px" class="ui middle aligned centered grid text container">
+      <div class="ui container">
+        <h1>Welcome to the</h1>
+        <h1>Manoa Flea Market</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="landing-section-2">
+    <div style="padding-top: 50px; height: 350px" class="ui middle aligned centered grid text container">
+      <div class="ui container">
+        <div class="ui two column grid container">
+          <div class="middle aligned column">
+            <h2>Login with your UH username</h2>
           </div>
-          <hr>
-          <div class="ui two column grid container">
-            <div class="column">
-              <img class="ui centered fluid circular image" src="/images/buy.jpeg"/>
-            </div>
-            <div class="middle aligned column">
-              <h1>Post items you would like to sell</h1>
-            </div>
-          </div>
-          <hr>
-          <div class="ui two column grid container">
-            <div class="middle aligned column">
-              <h1>Find items other UH students are selling</h1>
-            </div>
-            <div class="column">
-              <img class="ui centered fluid circular image" src="/images/sell.png"/>
-            </div>
+          <div class="column">
+            <img class="ui centered fluid circular image" src="/images/keyboard.png"/>
           </div>
         </div>
-
       </div>
+    </div>
   </div>
+
+  <div class="landing-section-3">
+    <div style="padding-top: 50px; height: 350px" class="ui middle aligned centered grid text container">
+      <div class="ui container">
+        <div class="ui two column grid container">
+          <div class="column">
+            <img class="ui centered fluid circular image" src="/images/buy.jpeg"/>
+          </div>
+          <div class="middle aligned column">
+            <h2>Post items you would like to sell</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="landing-section-4">
+    <div style="padding-top: 50px; height: 400px" class="ui middle aligned centered grid text container">
+      <div class="ui container">
+        <div class="ui two column grid container">
+          <div class="middle aligned column">
+            <h2>Find items other UH studnets are selling</h2>
+          </div>
+          <div class="column">
+            <img class="ui centered fluid circular image" src="/images/sell.png"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   {{/if}}
   {{/if}}
 </template>
