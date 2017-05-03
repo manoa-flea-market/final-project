@@ -31,7 +31,7 @@
         {
           "name": "Instruaments",
           "description": "Things you can play"
-        },
+        }
       ]
     },
     {
@@ -57,7 +57,7 @@
           ],
           "description": "A lamp made to look like a '?' Block from Super Mario Bros.",
           "picture": "/images/question-block-light.jpg"
-        },
+        }
       ]
     }
   ]
