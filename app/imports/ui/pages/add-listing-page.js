@@ -42,7 +42,7 @@ Template.Add_Listing_Page.events({
     instance.context.validate(newItemData);
 
     if (instance.context.isValid()) {
-      Items.insert(newItemData);
+      Items.define(newItemData);
       instance.messageFlags.set(displayErrorMessages, false);
       FlowRouter.go('Market_Page');
     } else {

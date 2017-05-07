@@ -2,6 +2,7 @@ import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { _ } from 'meteor/underscore';
 import { Contacts, ContactsSchema } from '../../api/contacts/contacts.js';
+import { Items, ItemsSchema } from '/imports/api/items/ItemCollection';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 
 /* eslint-disable no-param-reassign */

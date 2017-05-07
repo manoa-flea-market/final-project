@@ -49,7 +49,7 @@ class ItemCollection extends BaseCollection {
      * @param docID The docID of a Contact.
      * @returns { Object } An object representing the definition of docID.
      */
-    dumpOne(docID)
+    function dumpOne(docID)
     {
       const doc = this.findDoc(docID);
       const name = doc.name;
