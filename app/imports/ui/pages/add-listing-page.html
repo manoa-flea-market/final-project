@@ -9,6 +9,12 @@
           {{> Text_Form_Control label="Price" required=true errorMessage=(fieldError "price")}}
           {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" }}
         </div>
+        <form class="ui equal width form filter-data-form">
+          <div class="field">
+            {{> Select_Form_Control label="Categories" options=categories multiple=true }}
+          </div>
+        </form>
+        {{> Filter_Market_Page items=items }}
         <div class="field">
           {{> TextArea_Form_Control label="Description" placeholder="Short description here" errorMessage=(fieldError
           "description")}}
