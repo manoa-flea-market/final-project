@@ -11,10 +11,5 @@
       "popupHeight": 610
     },
     "initialDatabaseFileName": "database/initial-collection-data.json"
-  },
-  "galaxy.meteor.com": {
-    "env": {
-      "MONGO_URL": "mongodb://mekp:Kapolei96707@ds159180.mlab.com:59180/appdb"
-    }
   }
 }
