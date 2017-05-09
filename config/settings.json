@@ -1,7 +1,0 @@
-{
-  "galaxy.meteor.com": {
-    "env": {
-      "MONGO_URL": "mongodb://erikhuan:173isme@ds159180.mlab.com:59180/fleamarketdb"
-    }
-  }
-}
