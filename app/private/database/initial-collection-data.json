@@ -29,8 +29,12 @@
           "description": "Devices that help with building or creating"
         },
         {
-          "name": "Instruaments",
+          "name": "Instruments",
           "description": "Things you can play"
+        },
+        {
+          "name": "Food",
+          "description": "Something college students love"
         }
       ]
     },
