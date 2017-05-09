@@ -1,19 +1,20 @@
 <template name="User_Home_Page">
   {{#If_Logged_In}}
-  <div style="margin: 20px; height: 550px" class="ui container">
+  <div class="whole-background">
+    <div style="padding-top: 85px; padding-bottom: 85px; padding-left: 75px" class="ui container">
     <div class="ui cards">
 
       <div class="card">
         <div class="content">
           <img class="right floated mini ui image" src="/images/buy.jpeg">
-          <div class="header">
+          <div class="header" style="font-size: 15px; font-family: Monospace">
             Buy
           </div>
-          <div class="description">
+          <div class="description" style="font-size: 15px; font-family: Monospace">
             Let's see what's for sale now.
           </div>
         </div>
-        <a class="ui bottom attached button" href="./market-page">
+        <a class="ui bottom attached button" href="./market-page" style="font-size: 15px; font-family: Monospace">
           Market
         </a>
       </div>
@@ -21,14 +22,14 @@
       <div class="card">
         <div class="content">
           <img class="right floated mini ui image" src="/images/sell.png">
-          <div class="header">
+          <div class="header" style="font-size: 15px; font-family: Monospace">
             Sell
           </div>
-          <div class="description">
+          <div class="description" style="font-size: 15px; font-family: Monospace">
             List your items for sale now.
           </div>
         </div>
-        <a class="ui bottom attached button" href="./add-listing-page">
+        <a class="ui bottom attached button" href="./add-listing-page" style="font-size: 15px; font-family: Monospace">
           Add Listing
         </a>
       </div>
@@ -36,14 +37,14 @@
       <div class="card">
         <div class="content">
           <img class="right floated mini ui image" src="/images/person.png">
-          <div class="header">
+          <div class="header" style="font-size: 15px; font-family: Monospace">
             Profile
           </div>
-          <div class="description">
+          <div class="description" style="font-size: 15px; font-family: Monospace">
             Add your profile now
           </div>
         </div>
-        <a class="ui bottom attached button" href="./add-profile-page">
+        <a class="ui bottom attached button" href="./add-profile-page" style="font-size: 15px; font-family: Monospace">
           Add My Profile
         </a>
       </div>
@@ -51,19 +52,19 @@
       <div class="card">
         <div class="content">
           <img class="right floated mini ui image" src="/images/people.png">
-          <div class="header">
+          <div class="header" style="font-size: 15px; font-family: Monospace">
             Find
           </div>
-          <div class="description">
+          <div class="description" style="font-size: 15px; font-family: Monospace">
             Find other users and view their profiles
           </div>
         </div>
-        <a class="ui bottom attached button" href="./contact-page">
+        <a class="ui bottom attached button" href="./contact-page" style="font-size: 15px; font-family: Monospace">
           Contact List
         </a>
       </div>
     </div>
-
+    </div>
   </div>
   {{/If_Logged_In}}
 </template>
