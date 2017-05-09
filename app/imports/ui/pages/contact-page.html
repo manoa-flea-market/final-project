@@ -1,7 +1,8 @@
 <template name="Contact_Page">
   {{#If_Logged_In}}
+  <div class="whole-background">
     {{#if Template.subscriptionsReady}}
-    <div style="margin-top: 25px; margin-bottom: 25px" class="ui container">
+    <div style="padding-top: 25px" class="ui container">
       <div class="ui cards">
         {{#each contact in contactsList}}
           <div class="card">
@@ -29,5 +30,6 @@
     {{else}}
     {{> Loading}}
     {{/if}}
+  </div>
   {{/If_Logged_In}}
 </template>
