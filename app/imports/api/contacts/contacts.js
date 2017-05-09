@@ -12,7 +12,7 @@ export const ContactsSchema = new SimpleSchema({
   picture: {
     label: 'picture',
     type: String,
-    optional: false,
+    optional: true,
     max: 500,
   },
   first: {
@@ -29,8 +29,9 @@ export const ContactsSchema = new SimpleSchema({
   },
   telephone: {
     label: 'telephone',
-    type: Number,
+    type: String,
     optional: false,
+    max: 500,
   },
   email: {
     label: 'email',
