@@ -1,10 +1,14 @@
 <template name="Edit_Profile_Page">
   {{#If_Logged_In}}
   {{#if Template.subscriptionsReady}}
-  <div style="margin-top: 25px" class="ui container">
+  <div class="whole-background">
+    <div style="padding-top: 25px; padding-bottom: 25px" class="ui container">
     <form class="ui form contact-data-form {{ errorClass }}">
       <h4 class="ui dividing header">Add Contact</h4>
       <div class="field">
+        <div class="field">
+          {{> Text_Form_Control label="Picture" required=true value=(contactDataField 'picture') errorMessage=(fieldError "picture")}}
+        </div>
         <div class="two fields">
           {{> Text_Form_Control label="First" required=true value=(contactDataField 'first') errorMessage=(fieldError "first")}}
           {{> Text_Form_Control label="Last" required=true value=(contactDataField 'last') errorMessage=(fieldError "last")}}
@@ -17,7 +21,9 @@
         </div>
       </div>
       <button class="ui button" type="submit">Update</button>
+      <button class="ui button delete" type="submit">Delete</button>
     </form>
+  </div>
   </div>
   {{/if}}
   {{/If_Logged_In}}

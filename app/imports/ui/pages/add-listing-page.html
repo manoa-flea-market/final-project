@@ -1,27 +1,29 @@
 <template name="Add_Listing_Page">
   {{#If_Logged_In}}
-  <div style="min-height: 525px" class="ui container">
+  <div class="whole-background">
+    <div style="padding-top: 25px; padding-bottom: 25px" class="ui container">
     <div style="margin: 30px" class="ui text container segment">
       <form class="ui form listing-data-form {{ errorClass }}">
-        <div class="ui dividing header">List New Item</div>
-        <div class="field">
+        <div class="ui dividing header" style="font-family: Monospace">List New Item</div>
+        <div class="field" style="font-family: Monospace">
           {{> Text_Form_Control label="Name" required=true errorMessage=(fieldError "name")}}
           {{> Text_Form_Control label="Price" required=true errorMessage=(fieldError "price")}}
           {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" }}
         </div>
         <form class="ui equal width form filter-data-form">
-          <div class="field">
+          <div class="field" style="font-family: Monospace">
             {{> Select_Form_Control label="Categories" options=categories multiple=true }}
           </div>
         </form>
         {{> Filter_Market_Page items=items }}
-        <div class="field">
+        <div class="field" style="font-family: Monospace">
           {{> TextArea_Form_Control label="Description" placeholder="Short description here" errorMessage=(fieldError
           "description")}}
         </div>
-        <button class="ui button" type="submit">Submit</button>
+        <button class="ui button" type="submit" style="font-family: Monospace">Submit</button>
       </form>
     </div>
+  </div>
   </div>
   {{/If_Logged_In}}
 </template>

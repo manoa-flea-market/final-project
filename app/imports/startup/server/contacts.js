@@ -7,6 +7,7 @@ import { _ } from 'meteor/underscore';
  */
 const contactSeeds = [
   {
+    picture: 'http://mary-pascual.github.io/images/IMG_1244.jpg',
     first: 'Mary',
     last: 'Pascual',
     telephone: '(808) 218-5099',

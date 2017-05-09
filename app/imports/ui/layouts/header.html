@@ -2,27 +2,28 @@
   {{#if currentUser}}
   <div style="margin: 0px; border-radius: 0px; background-color: #024E30" class="ui borderless inverted menu">
     <div class="ui container">
-      <a style="color: white" class="item" href="{{pathFor '/'}}"><h1>Manoa Flea Market</h1></a>
+      <a><img style="width: 75px; height: 75px; padding-top: 5px; padding-bottom: 5px" class="ui centered fluid circular image" src="http://www5.pbrc.hawaii.edu/logos/manoaseal_transparent.png"></a>
+      <a style="color: white" class="item" href="{{pathFor '/'}}"><h1 style="font-family: Monospace">Manoa Flea Market</h1></a>
       <div class="ui simple dropdown item" style="background-color: transparent">
-        <div class="text" style="color: white"><h3>Market</h3></div>
+        <div class="text" style="color: white; font-family: Monospace"><h3 style="font-family: Monospace">Market</h3></div>
         <div class="menu">
-          <a class="{{ isActiveRoute 'Market_Page'}} item" href="{{ pathFor 'Market_Page' }}">Market</a>
-          <a class="{{ isActiveRoute 'Add_Listing_Page'}} item" href="{{ pathFor 'Add_Listing_Page' }}">Add Listing</a>
+          <a class="{{ isActiveRoute 'Market_Page'}} item" href="{{ pathFor 'Market_Page' }}" style="font-size: 15px; font-family: Monospace">Market</a>
+          <a class="{{ isActiveRoute 'Add_Listing_Page'}} item" href="{{ pathFor 'Add_Listing_Page' }}" style="font-size: 15px; font-family: Monospace">Add Listing</a>
         </div>
       </div>
 
 
       <div class="ui simple dropdown item" style="background-color: transparent">
-        <div class="text" style="color: white"><h3>Contacts</h3></div>
+        <div class="text" style="color: white; font-family: Monospace"><h3 style="font-family: Monospace">Contacts</h3></div>
         <div class="menu">
-          <a style="color: white" class="{{ isActiveRoute 'Contact_Page'}} item" href="{{ pathFor 'Contact_Page' }}">Contact List</a>
-          <a class="{{ isActiveRoute 'Add_Profile_Page'}} item" href="{{ pathFor 'Add_Profile_Page' }}">Add
+          <a style="color: white; font-size: 15px; font-family: Monospace" class="{{ isActiveRoute 'Contact_Page'}} item" href="{{ pathFor 'Contact_Page' }}">Contact List</a>
+          <a class="{{ isActiveRoute 'Add_Profile_Page'}} item" href="{{ pathFor 'Add_Profile_Page' }}" style="font-size: 15px; font-family: Monospace">Add
             My Profile</a>
         </div>
       </div>
 
 
-      <a href="#" class="right aligned item">{{> Cas_Login align="right"}}</a>
+      <a href="#" class="right aligned item" style="font-size: 15px; font-family: Monospace">{{> Cas_Login align="right"}}</a>
     </div>
   </div>
   {{/if}}

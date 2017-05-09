@@ -30,11 +30,12 @@ Template.Add_Profile_Page.events({
   'submit .contact-data-form'(event, instance) {
     event.preventDefault();
     // Get name (text field)
+    const picture = event.target.Picture.value;
     const first = event.target.First.value;
     const last = event.target.Last.value;
     const telephone = event.target.Telephone.value;
     const email = event.target.Email.value;
-    const newContactData = { first, last, telephone, email };
+    const newContactData = { picture, first, last, telephone, email };
     // Clear out any old validation errors.
     instance.context.resetValidation();
     // Invoke clean so that newStudentData reflects what will be inserted.
