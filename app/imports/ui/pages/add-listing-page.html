@@ -1,95 +1,27 @@
 <template name="Add_Listing_Page">
   {{#If_Logged_In}}
-  <div style="margin: 20px" class="ui container">
-    <h1 class="ui dividing header">Sell Item</h1>
-    <form class="ui form">
-      <div class="field">
-        <label>Item for Sale</label>
+  <div style="min-height: 525px" class="ui container">
+    <div style="margin: 30px" class="ui text container segment">
+      <form class="ui form listing-data-form {{ errorClass }}">
+        <div class="ui dividing header">List New Item</div>
         <div class="field">
-          <input type="text" name="item_name" id="item_name" placeholder="Item">
+          {{> Text_Form_Control label="Name" required=true errorMessage=(fieldError "name")}}
+          {{> Text_Form_Control label="Price" required=true errorMessage=(fieldError "price")}}
+          {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" }}
         </div>
-      </div>
-
-      <div class="field">
-        <label>Price</label>
-        <input type="text" name="price" id="price" placeholder="Price">
-      </div>
-
-      <label>Choose a Category:</label>
-      <div class="inline fields">
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="category" checked="" tabindex="0" class="hidden">
-            <img class="ui mini circular image" style= "margin-left: 30px" src="/images/apartment.jpeg"/>
-            <label>Apartment Living</label>
+        <form class="ui equal width form filter-data-form">
+          <div class="field">
+            {{> Select_Form_Control label="Categories" options=categories multiple=true }}
           </div>
-        </div>
+        </form>
+        {{> Filter_Market_Page items=items }}
         <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="category" tabindex="0" class="hidden">
-            <img class="ui mini circular image" style="margin-left: 30px" src="/images/clothes.jpeg"/>
-            <label>Clothes</label>
-          </div>
+          {{> TextArea_Form_Control label="Description" placeholder="Short description here" errorMessage=(fieldError
+          "description")}}
         </div>
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="category" tabindex="0" class="hidden">
-            <img class="ui mini circular image" style="margin-left: 30px" src="/images/dorm.jpeg"/>
-            <label>Dorm Living</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="category" tabindex="0" class="hidden">
-            <img class="ui mini circular image" style="margin-left: 30px" src="/images/food.jpeg"/>
-            <label>Food</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="category" tabindex="0" class="hidden">
-            <img class="ui mini circular image" style="margin-left: 30px" src="/images/furniture.jpeg"/>
-            <label>Furniture</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="category" tabindex="0" class="hidden">
-            <img class="ui mini circular image" style="margin-left: 30px" src="/images/kitchen.jpeg"/>
-            <label>Kitchen Appliances</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="category" tabindex="0" class="hidden">
-            <img class="ui mini circular image" style="margin-left: 30px" src="/images/schoolsupplies.png"/>
-            <label>School Supplies</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="category" tabindex="0" class="hidden">
-            <img class="ui mini circular image" style="margin-left: 30px" src="/images/textbooks.jpeg"/>
-            <label>Textbooks</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="category" tabindex="0" class="hidden">
-            <img class="ui mini circular image" style="margin-left: 30px" src="/images/trinkets.jpeg"/>
-            <label>Other</label>
-          </div>
-        </div>
-      </div>
-      <div class="ui form">
-        <div class="field">
-          <label>Description</label>
-          <textarea></textarea>
-        </div>
-      </div>
-      <br>
-      <button class="ui button" type="submit">Submit</button>
-    </form>
+        <button class="ui button" type="submit">Submit</button>
+      </form>
+    </div>
   </div>
   {{/If_Logged_In}}
 </template>

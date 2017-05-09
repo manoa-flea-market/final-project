@@ -3,7 +3,7 @@
   .idea/
   npm-debug.log
   packages/*/.npm/
-=======
+
 # .gitignore standard file for ICS Software Engineering Meteor Development.
 
 # Ignore IntelliJ Project files.
